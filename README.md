@@ -1,2 +1,2 @@
-# C-Programming
+# Turbo C (C Programming)
 My C Programming codes, projects and etc.
