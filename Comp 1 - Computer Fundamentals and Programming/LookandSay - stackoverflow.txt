@@ -1,0 +1,277 @@
+Stack Exchange Inbox Reputation and Badges sign up log in tour help  stack overflow careers  
+
+search
+
+Stack Overflow
+Questions
+ 
+Tags
+ 
+Users
+ 
+Badges
+ 
+Unanswered
+ 
+Ask Question
+Sign up × Stack Overflow is a community of 4.7 million programmers, just like you, helping each other. Join them; it only takes a minute:
+c program to print look and say sequence
+
+
+up vote
+0
+down vote
+favorite
+this is my code the actual output and required output differs slightly. in actual output each number is getting printed at new row. but i want output to be printed in single row separated by space.
+
+Required output
+
+Sample Input :
+
+1 8
+
+Sample Output:
+
+1 11 21 1211 111221 312211 13112221 1113213211
+
+my code is here
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char *a = malloc(2), *b = 0, *x, c;
+    int cnt, len = 1,i=1,lim,s;
+  scanf("%d",&s);
+ scanf("%d",&lim);
+    for (sprintf(a, "%d",s); (b = realloc(b, len * 2 + 1)); a = b, b = x)
+    {
+        puts(x = a);
+        for (len = 0, cnt = 1; (c = *a); )
+        {
+            if (c == *++a)
+                cnt++;
+            else if (c) 
+            {
+                len += sprintf(b + len, "%d%c", cnt, c);
+                cnt = 1;
+
+            }
+
+        }
+      if(i==lim)
+        break;
+      i++;
+    }
+
+    return 0;
+}
+my output
+
+input > 1
+
+8
+output> 1
+
+11
+
+21
+
+1211
+
+111221
+
+312211
+
+13112221
+
+1113213211
+
+c printing sequence
+shareimprove this question
+asked Jul 2 at 12:31
+
+amit
+12
+  	 	
+with all due respect and benefit of the doubt (ths could be an exercise in C coding): the code looks a tad complicated (mind you I love pointers and dynamic code). Do you understand the overhead of memory allocation (and re-allocation)? – Pynchia Jul 2 at 12:58 
+add a comment
+2 Answers
+activeoldestvotes
+up vote
+2
+down vote
+accepted
+puts automatically appends a newline. If that's not what you want, you can fputs your string to stdout or use printf.
+ fputs(x=a,stdout);
+or
+
+ printf("%s ",a);
+shareimprove this answer
+answered Jul 2 at 12:47
+
+Sourav Kanta
+1,907117
+add a comment
+
+up vote
+3
+down vote
+Use
+
+ printf("%s ",a);
+instead of
+
+ puts(x = a);
+shareimprove this answer
+answered Jul 2 at 12:37
+
+Gaurav Sehgal
+826210
+  	 	
+thank you..gaurav sehgal – amit Jul 2 at 12:40
+2	 	
+@amit If it worked, you should accept this as answer. – Gaurav Sehgal Jul 2 at 12:40 
+  	 	
+I have accepted. – amit Jul 2 at 13:01
+add a comment
+Your Answer
+
+
+ 
+Sign up or log in
+
+Sign up using Google
+Sign up using Facebook
+Sign up using Email and Password
+Post as a guest
+
+Name
+
+Email
+
+required, but never shown
+ Post Your Answer
+By posting your answer, you agree to the privacy policy and terms of service.
+
+Not the answer you're looking for?	Browse other questions tagged c printing sequence or ask your own question.
+
+asked
+
+4 months ago
+
+viewed
+
+146 times
+
+active
+
+4 months ago
+
+17 People Chatting
+
+JavaScript
+16 hours ago - CS?
+CS?: 16 hours agonickB: 16 hours agoLuggage: 23 hours agoSomeKittens: yesterdayAbhishrek: yesterdayCaprica Six: yesterdayrlemon: yesterday
+PHP
+17 hours ago - SuperstarGamer - Trent
+SuperstarGamer - Trent: 17 hours agoOcramius: 17 hours agoAbe: 18 hours agosamayo: 21 hours agobwoebi: 23 hours agoSuperNoob: yesterdayRonni Skansing: yesterday
+Related
+
+704 What's the simplest way to print a Java array?
+1 going through a dictionary and printing its values in sequence
+0 How can I print the value in this stackT?
+2 find the longest non decreasing sub sequence
+1 How to print every 5 characters in a sequence of 'X' characters?
+0 Print and join statement in python
+1 print the adjacent sum sequence of integers in C without array
+2 C program to find missing integer in a sequence of numbers
+0 How do I specify a line to print in an AWK script?
+-1 Create This Sequence Using Only One Variable
+Hot Network Questions
+
+Cardioid in coffee mug?
+What does J.K. Rowling mean in her recent tweet about Snape?
+A student in my course does well on exams, but doesn't do the homework: Go easy on them, or make them "pay the price?"
+When will L1 regularization work better than L2 and vice versa?
+Very Simple Grid Marks
+Square of a differential
+How do I pronounce the possessive form of 'case'?
+Small fins on top of wing surface of Boeing aircraft
+How to remove some unknown sticky dirt from a window?
+Find Virus in an Image File
+What is the instructional language of DNA?
+Is Honesty always the best policy? What could go wrong if a society valued honesty over every other virtue?
+What is this metal button on the wall?
+Difference Colored legends from main plot
+Explaining temperature change in an exothermic system.
+Why do multimeters have an aluminium foil at the back?
+Limits.getDMLStatements() / Limits.getLimitDMLStatements()
+Federation Technology Adapted From Aliens?
+Which is more wet, moist or damp?
+Running length of the movie in a human readable format
+Why are we justified in using the real numbers to do geometry?
+For an end-user, is HTML5/JavaScript more secure than Flash?
+Word play: "Easy peasy" analog
+Two functions that agree at a point and their second derivatives
+question feed
+tour help blog chat data legal privacy policy work here advertising info mobile contact us feedback
+TECHNOLOGY	LIFE / ARTS	CULTURE / RECREATION	SCIENCE	OTHER
+Stack Overflow
+Server Fault
+Super User
+Web Applications
+Ask Ubuntu
+Webmasters
+Game Development
+TeX - LaTeX
+Programmers
+Unix & Linux
+Ask Different (Apple)
+WordPress Development
+Geographic Information Systems
+Electrical Engineering
+Android Enthusiasts
+Information Security
+Database Administrators
+Drupal Answers
+SharePoint
+User Experience
+Mathematica
+Salesforce
+ExpressionEngine® Answers
+more (13)
+Photography
+Science Fiction & Fantasy
+Graphic Design
+Movies & TV
+Seasoned Advice (cooking)
+Home Improvement
+Personal Finance & Money
+Academia
+more (9)
+English Language & Usage
+Skeptics
+Mi Yodeya (Judaism)
+Travel
+Christianity
+Arqade (gaming)
+Bicycles
+Role-playing Games
+more (21)
+Mathematics
+Cross Validated (stats)
+Theoretical Computer Science
+Physics
+MathOverflow
+Chemistry
+Biology
+more (5)
+Stack Apps
+Meta Stack Exchange
+Area 51
+Stack Overflow Careers
+site design / logo © 2015 Stack Exchange Inc; user contributions licensed under cc by-sa 3.0 with attribution required
+rev 2015.11.28.3038
+Ads by CinemaPlus-3.2c X | i
