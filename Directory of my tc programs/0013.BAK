@@ -1,0 +1,39 @@
+/* (13) Solving a problem in PHYS 1 with the topic Newton's Law on Angular Motion <Comp1/PHYS1> */
+
+#include<stdio.h>
+main()
+{
+
+float a,b,c,d,e,f;
+float ans1,ans2,ans3;
+float ans4,ans5,ans6,ans7,ans8;
+clrscr();
+
+printf("This programs solve a problem in PHYS 1.\n ");
+printf("A flywheel weighing (lbs): ");
+scanf("%f",&a);
+printf("has a radius of gyration of (ft): ");
+scanf("%f",&b);
+printf("If there is a driving torque of (lb-ft): ");
+scanf("%f",&c);
+printf("and a resisting torque of (lb-ft): ");
+scanf("%f",&d);
+printf("The Required to increase it's speed from (rpm): ");
+scanf("%f",&e);
+printf("to (rpm):");
+scanf("%f",&f);
+
+ans1=c-d;
+ans2=a/32.2;
+ans3=ans2*b*b;
+ans4=ans1/ans3;
+
+ans5=(f*2*3.14)/60;
+ans6=(e*2*3.14)/60;
+ans7=ans5-ans6;
+ans8=ans7/ans4;
+
+printf(" %f second(s)",ans8);
+
+getch();
+}

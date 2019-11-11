@@ -1,0 +1,10 @@
+/* (1) Hello Turbo C! <Comp 1> */
+
+#include<stdio.h>
+main(){
+
+clrscr();
+
+printf("Hello Turbo C!");
+getch();
+}

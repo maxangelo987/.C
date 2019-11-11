@@ -1,0 +1,50 @@
+/* (5) Reservoir w/ intake pipes A & B;
+Output: time to be filled * 
+(if-else if, casting functions) <Comp1/MATH1> */
+
+#include<stdio.h>
+main()
+{
+
+
+int x,y,ans1,ans5;
+float z,a,b,ans;
+double ans3, ans4;
+
+clrscr();
+
+printf("This program let's you: Calculate the problem in MATH1.\n\n");
+printf("It will take to fill a reservoir with in takes pipe:\n");
+printf("\nIf A can do alone in hours: ");
+scanf("%d",&x);
+printf("and B can do alone in hours: ");
+scanf("%d",&y);
+
+
+if (y==0||x==0)
+	{
+	printf("If x or y is zero it is Math Error!");
+	}
+else
+
+{
+z=(float)1/x;
+a=(float)1/y;
+b=(float)z+a;
+ans=(float)1/b;
+ans1=(int)ans;
+
+ans3=(double)ans-ans1;
+ans4=(double)ans3*24;
+ans5=(int)ans4;
+
+
+
+
+printf("\nOutput: In %d day(s) and %d hour(s)",ans1,ans5);
+
+}
+getch();
+
+
+}

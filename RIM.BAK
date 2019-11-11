@@ -1,0 +1,64 @@
+#include<stdio.h>
+main()
+{
+
+int n, h, count, i, j;
+clrscr();
+
+scanf("%d",&n);
+
+count=0;
+
+for (h=2;h<n;h++)
+	{
+		if (n%h==0)
+		    {
+		    count++;
+		    }
+	}
+
+
+if (count==0)
+	{
+		printf("It's a PRIME! And the factors are: ");
+		i=n-1;
+	}
+else
+	{
+		printf("It's not a PRIME!");
+		getch();
+		return 0;
+	}
+
+j=2;
+for (;i!=0;)
+	{
+		if (i%j==0)
+			{
+			   printf("%d",j);
+			   i=i/j;
+
+			   if (i==1)
+				{
+				break;
+				}
+
+			      else
+				{
+				printf("*");
+				}
+			}
+		else
+			{
+			j++;
+			}
+
+	break;
+	}
+
+     printf("+1");
+
+
+getch();
+
+}

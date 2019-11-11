@@ -1,0 +1,26 @@
+/* (14) Tangent of a Number in rads. 
+(printf, scanf functions) <Comp1/MATH2> */
+
+
+#include<stdio.h>
+#include<math.h>
+#include<conio.h>
+main()
+{
+
+
+int x;
+float z;
+clrscr();
+
+printf("This programs solves the tangent of a number.\n ");
+printf("Tangent of: ");
+scanf("%d",&x);
+
+
+z=tan(x);
+printf("is %f rads.",z);
+
+getch();
+
+}

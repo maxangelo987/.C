@@ -1,0 +1,20 @@
+#include<stdio.h>
+main()
+{
+  int num;
+  clrscr();
+  printf("please enter an integer (-1 to QUIT):");
+  scanf ("%d", & num);
+  while(num!= -1)
+   {
+	if(num % 2 == 0)
+	   printf("the number is EVEN.\n\n");
+	else
+	   printf("the number is ODD.\n\n");
+	printf(pleaseenter an integer(-1 to QUIT):");
+	scanf("%d",&num);
+   }
+   printf("end of program...");
+   getch();
+   return 0;
+}

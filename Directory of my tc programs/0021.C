@@ -1,0 +1,80 @@
+/* (21) Inputed numbers press 0 to stop then sort the output. 
+(array, for loop functions) <Comp1> */
+
+#include<stdio.h>
+main()
+{
+
+long g[100],h[100],y=0,i,j;
+double g2[100], x2, x[100],temp,h1[100];
+clrscr();
+
+printf("Program to that the inputed numbers press 0 to stop then sort the output. \n");
+printf("Inputs: ");
+for (i=0;;i++)
+	{
+	scanf("%lf",&x2);
+
+	if (x2==0)
+		{
+		break;
+		}
+	else
+		{
+		x[i]=x2;
+		y++;
+		}
+
+	}
+
+
+for (i=0;i<y;i++)
+	{
+
+	for (j=0;j<y-1;j++)
+		{
+
+		if (x[j]>x[j+1])
+			{
+			temp=x[j];
+			x[j]=x[j+1];
+			x[j+1]=temp;
+			}
+		}
+
+	}
+
+
+for (i=0;i<y;i++)
+	{
+	g[i]=(long)x[i];
+	g2[i]=x[i]-g[i];
+
+	if (g2[i]==0)
+		{
+		h[i]=g[i];
+		}
+
+	else
+		{
+		h1[i]=x[i];
+		}
+
+	}
+
+
+for (i=0;i<y;i++)
+	{
+
+	if (g2[i]==0)
+		{
+		printf(" %ld ",h[i]);
+		}
+	else
+		{
+		printf(" %.2lf ",x[i]);
+		}
+       }
+
+getch();
+}

@@ -1,0 +1,303 @@
+Comp 1 - Computer Fundamentals and Programming
+Turbo C; P.S. - All of the programs uses the common functions:
+printf, scanf, clrscr, getch.
+
+printf(); - printing 
+scanf(); - scan a data type
+ %d - integer
+ %ld - long integer
+ %f - float, 4.4
+ %lf - double, 44.42424242
+ %c - char
+ %s - string
+clrscr(); - clearing the screen
+getch(); - pausing the screen or get character or scanning char
+
+(?) - Unfinished or uncertain programs.
+
+/* (0) RNO Program 
+(void, switching functions) <Comp 1/Mathematics> */
+
+/* (1) Hello Turbo C! 
+(printf function) <Comp 1> */
+
+/* (2) (x+y)=sum 
+(printf, scanf functions) <Comp1/MATH1>*/
+
+/* (3) Determining ODD/EVEN number 
+(if-else if function) <Comp1/MATH1> */
+
+/* (4) Fibonacci Series 
+(for loop function) <Comp1/MATH1> */
+
+/* (5) Reservoir w/ intake pipes A & B;
+Output: time to be filled * 
+(if-else if, casting functions) <Comp1/MATH1> */
+
+/* (6) Input: 123
+       Output: 321 
+(printf, scanf functions) <Comp1> */
+
+/* (7) Determining the roots of a Quadratic Equation:
+ax^2+bx+c=0 
+(infinite for loop, break, if-else if functions) <Comp1/MATH1> */
+
+
+/* (8) Add if Composite and Minus if Prime and output is the total 
+(for loop function) <Comp1> */
+
+/* (9) Determining if the date is valid/invalid 
+(switching function) <Comp1> */
+
+/* (10) Guess the number 
+(if-else if function) <Comp1> */
+
+/* (11) Solving the Area of a Circle 
+(printf, scanf functions) <Comp1/MATH0> */
+
+/* (12) Reversing mutiple numbers 
+(for loop function) <Comp1> */
+
+/* (13) Solving a problem in PHYS 1 with
+ the topic Newton's Law on Angular Motion 
+(printf, scanf functions) <Comp1/PHYS1> */
+
+/* (14) Tangent of a Number in rads. 
+(printf, scanf functions) <Comp1/MATH2> */
+
+/* (15) Number to Scientific Notation. 
+(if-else if function) <Comp1/CHEM1> */
+
+/* (16) Computer Hardware Components Definitions. 
+(strcpy, strcmp functions ) <Comp1/CpE211> */
+
+/* (17) Finding the largest decimal number and reverse it.
+No: 3; Example: 12 123 3;
+Output: 321 (for loop function) <Comp1/MATH1>*/
+
+/* (18) Finding the Greatest Common Denominator of the numbers. 
+(for loop function) <Comp1/MATH1> */
+
+/* (19) Finding the Largest of the numbers and determine the Even. 
+(for loop function) <Comp1/MATH1> */
+
+/* (20) Determining every sum you inputed numbers if it is Prime or Not. 
+(nested-for loop function) <Comp1/MATH1> */
+
+/* (21) Inputed numbers press 0 to stop then sort the output. 
+(array, for loop functions) <Comp1> */
+
+/* (22) 'a' and 'b' for division a/b. 
+(printf, scanf functions) <Comp1/MATH1> */
+
+/* (23) Input float numbers then just get the whole part. 
+(array, for loop functions) <Comp1> */
+
+/* (24) 5 float inputs and their average. 
+(printf, scanf, casting functions) <Comp1/MATH1> */
+
+/* (25) Input a desire array and print what you inputed.
+(array, nested-for loop functions) <Comp1> */
+
+/* (26) Decimal to Binary.
+(array, while loop, for loop functions) <Comp1/Comptech3/CpE321> */
+
+/* (27) Input numbers, zero to terminate. Det min and max and there GCD.
+(array, for loop functions) <Comp1/MATH1> */
+
+/* (28) Enter magic number 143, 143 means I love you.
+(if-else function) <Comp1> */
+
+/* (29) Prime numbers.
+(for loop, if-else functions) <Comp1/MATH1> */
+
+/* (30) Sorting numbers.
+(void, do-while loop functions) <Comp1> */
+
+/* (31) Perimeters of various shapes.
+(strcpy, strcmp, array functions) <Comp1/MATH0> */
+
+/* (32) Input numbers press zero to terminate,
+determine the composite and the largest number.
+Show the prime factorization of the largest 
+composite numbers
+(for loop, nested-if,else-if, array functions) <Comp1/MATH1> */
+
+/* (33) Input numbers press zero to terminate,
+show the prime numbers and its binary
+(for loop, nested-for loop, array functions) <Comp1/MATH1> */
+
+/* (34) Reversing the whole number in float.
+EX: 1234.33 4321.33 
+(for loop, nested-for loop, array functions) <Comp1/MATH1> */
+
+/* (35) Input numbers press zero to terminate,
+Determine the largest odd number
+(for loop, nested-for loop, array functions) <Comp1/MATH1> */
+
+/* (36) Inputs: 12.33 0
+Out: 33.12
+(for loop, nested-for loop, nested if, array functions) <Comp1/MATH1> */
+
+/* (37) Inputs: 12 4 55 55 0; Scan number: 2;
+Out the 2 digit. Out: 12 55 55 
+(for loop, array functions) <Comp1/MATH1> */
+
+/* (38) Binary to Octal
+(for loop, array functions) <Comp1/Comptech3/CpE321> */
+
+/* (39) Determine the input if it is odd or even
+(while loop, if else-if functions) <Comp1/MATH1> */
+
+/* (40) A program that sorts a list of integer numbers. The list is
+terminated with e at the end.
+NOTE: The array is limited to the settings in SIZE constant. 
+(void, do-while loop functions) <Comp1/MATH1> */
+
+/* (41) Input 3 numbers. Determine the SUM, QUOTIENT,
+LARGEST and SMALLEST.
+(if functions) <Comp1/MATH1> */
+
+/* (42) Input numbers. Determine how many it repeats.
+EX. 1 1 1 2 2 2
+Output: 1 - 3; 2 - 3
+(nested for loop function) <Comp1/MATH1> */
+
+/* (43) Input numbers: 3
+Input 3 digits: 1 2 3
+Sum of the Powered Values: (1^1)+(2^2)+(3^3)=32
+(array, for loop functions) <Comp1/MATH1> */
+
+/* (44) Sum of all the datas based on 2D array
+(2D array, nested for loop functions) <Comp1/MATH1> */
+
+/* (45) Converting number to words.
+Ex: 45 - fourty five
+(switching, for loop functions) <Comp1/MATH1> */
+
+/* (46) Enter How many inputs: 9
+Enter how many digits: 8
+Input(s): 1 2 3 4 5.5 6 7 8 9
+Out: 1 2 3 4 5.5 6 7 8, only the 8 inputs display (?) 
+(if-for loop,nested for loop functions) <Comp1/MATH1> */
+
+/* (47) Enter # of sets: 3
+Element (1): 1 2 3 0
+Element (2): 1 2 4 0
+Element (3): 4 5 6 0
+A union B (Ascending Prime Numbers)+ {1 2 3 4 5}
+(?) 
+(2D array, nested for loop functions) <Comp1/MATH1> */
+
+/* (48) Input string and arrange it alphabetical order
+(array, nested for loop functions) <Comp1/Engl1> */
+
+/* (49) VACANT.
+(array, nested for loop functions) <Comp1/Engl1> */
+
+/* (50) ANAGRAM: If the 1st input is anagram in the
+2nd input the output of the string will be reverse.
+(array, while loop, strtok, strrev functions) <Comp1/Engl1> */
+
+/* (51) EBAN numbers:
+Ex: 45 - fourty fiv(e)
+Out: EBAN
+(switching, for loop, strcpy, strcat functions) <Comp1/MATH1> */
+
+/* (52) Decimal to Binary
+(for loop function) <Comp1/Comptech3/CpE321> */
+
+/* (53) Sorting inputs
+(array, nested for loop functions) <Comp1/MATH1> */
+
+/* (54) Palindrome or Not-Palindrome:
+1001 - Palindrome
+(array, for loop functions) <Comp1/MATH1> */
+
+/* (55) CAIPHERTEXT: Encrypt and Decrypt
+(switching function) <Comp1/Engl1> */
+
+/* (56) Enter inputs, determine if it is
+Odd or Even.
+(array, for loop functions) <Comp1/MATH1> */
+
+/* (57) Determine the Happy Numbers in given range. 
+(infinite for loop functions) <Comp1/MATH1> */
+
+/* (58) Printing CHAPPIE when you input 69 
+(if, printf functions) <Comp1> */
+
+/* (59) Wasteful Number.
+If the prime factors of a number is greater
+than its digit. 
+(for loop functions) <Comp1/MATH1> */
+
+/* (60) Enter inputs, then display the 
+prime and composite.
+(void, struct, array functions) <Comp1/MATH1> */
+
+/* (61) Determine the Happy Numbers and its
+Prime Factors
+(nested if, infinite for loop functions) <Comp1/MATH1> */
+
+/* (62) Determine if it is Happy and Prime number.
+(nested if, infinite for loop functions) <Comp1/MATH1> */
+
+/* (63) CAIPHERTEXT: Encrypt and Decrypt
+(switching function) <Comp1/Engl1> */
+
+/* (64) Splitting String.
+Example: Hello World
+Out: Hello
+World
+(strtok, for loop functions) <Comp1/Engl1> */
+
+/* (65) Enter inputs, then display the 
+prime and composite.
+(array, for loop functions) <Comp1/MATH1> */
+
+/* (66) Reversing number by using its remainder
+(for loop function) <Comp1/MATH1> */
+
+/* (67) Enter inputs, display:
+EVEN, SUM of Even Numbers, ODD, PRIME, COMPOSITE.
+(array, nested for loop function) <Comp1/MATH1> */
+
+/* (68) Largest number of 3 inputs.
+(if else function) <Comp1/MATH1> */
+
+/* (69) Enter 2 numbers, determine its GCD.
+Convert GCD to binary.
+(if else function) <Comp1/MATH1/CompTech3/CpE321> */
+
+/* (70) Printing PYRAMID.
+(textcolor, for loop functions) <Comp1/MATH0> */
+
+/* (71) Computer Shutdown.
+(system function) <Comp1/CpE211> */
+
+/* (72) Enter username (only lower case) then if 
+it lower case go directly to password
+(strlwr, strlen, for loop functions) <Comp1> */
+
+/* (73) Enter string then display the word 
+depending on the given position
+(2D array, for loop functions) <Comp1/Engl1> */
+
+/* (74) If what word in 1st input is in 2nd input
+display it.
+Input1: Hello World
+Input2: Wonderful Hello
+Out: Hello
+(long check(char *, char *), strtok, 
+while loop, for loop functions) <Comp1/Engl1> */
+
+/* (75) Printing the value in x and y.
+(void, struct functions) <Comp1/MATH1> */
+
+/* (76) Enter 2 strings determine if anagrams
+(array,strings, for loop functions) <Comp1/Engl1> */
+
+/* (77) Look and say. 2-12-1112
+(malloc, realloc, sprintf, array pointers functions) <Comp1/MATH1> */
+

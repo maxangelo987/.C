@@ -1,0 +1,88 @@
+/* (50) ANAGRAM: If the 1st input is anagram in the
+2nd input the output of the string will be reverse.
+(array, while loop, strtok, strrev functions) <Comp1/Engl1> */
+
+#include<stdio.h>
+#include<string.h>
+long check(char *, char *);
+main(){
+char in1[50], in2[50], *ptr, *myword[20], *myword2[20];
+long a,b,c,d,cond;
+clrscr();
+
+printf("Input 1: ");
+gets(in1);
+printf("Input 2: ");
+gets(in2);
+
+a=0;
+ptr=strtok(in1, " ");
+while(ptr!=NULL)
+	{
+	myword[a]=ptr;
+	a++;
+	ptr=strtok(NULL, " ");
+	}
+
+b=0;
+ptr=strtok(in2, " ");
+while(ptr!=NULL)
+	{
+	myword2[b]=ptr;
+	b++;
+	ptr=strtok(NULL, " ");
+	}
+
+
+for(c=0;c<a;c++)
+	{
+	for(d=0;d<b;d++)
+		{
+		cond=check(myword[c], myword2[d]);
+		if (cond==1)
+			{
+			strrev(myword[c]);
+			strrev(myword2[d]);
+			}
+		}
+
+	}
+
+	printf("Output 1: ");
+for (c=0;c<a;c++)
+	{
+	printf("%s ",myword[c]);
+	}
+	printf("\nOutput 2: ");
+
+for (d=0;d<b;d++)
+	{
+	printf("%s ",myword2[d]);
+	}
+
+getch();
+}
+
+
+long check(char *word1, char *word2){
+	char myword1[20], myword2[20];
+	long i,j,k,x,y,t;
+
+	strcpy(myword1, word1);
+	strcpy(myword2, word2);
+
+	x=strlen(myword1);
+	y=strlen(myword2);
+
+    j=0;
+    for(i=0; i<y; i++)
+	   {
+		if(myword1[i]!=myword2[j])
+		{
+		return 0;
+		}
+		j++;
+	   }
+     return 1;
+
+	}

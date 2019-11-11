@@ -1,0 +1,17 @@
+how to fix USB ports not Detecting:
+
+1. click "START "menu
+
+2. searh "DEVICE MANAGER" and hit ENTER.
+
+3. click on your PC.
+
+4. find "UNIVERSAL SERIAL BUS CONTROLLER".
+
+5. find the defective part of your "USB ONTROLLER"
+   a hazard logo will show on the part of your "USB CONTROLLER"
+  
+6. right click it.
+7. click "UNINSTALL".(NOTE: it will uninstall the part of your USB port.) 
+8. right click the name of your pc at the upper part. and click "SCAN FOR HARDWARE CHANGES"
+   (NOTE: it will reinstall the previous part of your USB controller that you have been uninstalled)

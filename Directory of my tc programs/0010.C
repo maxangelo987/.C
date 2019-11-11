@@ -1,0 +1,59 @@
+/* (10) Guess the number 
+(if-else if function) <Comp1> */
+
+#include<stdio.h>
+main()
+{
+
+int n,i;
+clrscr();
+
+
+printf("This program let's you: Guess the number.\n");
+printf("Input Number: ");
+
+for(;;)
+{
+scanf("%d",&n);
+
+if (n==364)
+		{
+		printf("Correct Number!");
+		break;
+		}
+
+else
+	{
+		for (i=1;i++;i<=n)
+
+		{
+		if (n!=364)
+			{
+				if (n<364)
+				{
+				printf("Wrong Answer! Too Low!\nInput another: ");
+
+				break;
+				}
+
+				else if (n>364)
+				{
+				printf("Wrong Answer! Too High!\nInput Another:");
+				break;
+				}
+
+			}
+		else
+
+				{
+				printf("Correct Answer!");
+				break;
+				}
+		}
+
+
+	}
+}
+
+getch();
+}

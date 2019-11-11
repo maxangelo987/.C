@@ -1,0 +1,31 @@
+/* (4) Fibonacci Series 
+(for loop function) <Comp1/MATH1> */
+
+#include<stdio.h>
+main()
+{
+
+
+int x=0,y=1,sum,inp,i;
+clrscr();
+
+printf("This program let's you: Show the Fibonacci Series.\n");
+printf("Enter how many elements: ");
+scanf("%d",&inp);
+printf("%d %d",x,y);
+
+
+for (i=2;i<inp;i++)
+{
+
+sum=x+y;
+printf(" %d",sum);
+x=y;
+y=sum;
+
+}
+
+
+getch();
+
+}

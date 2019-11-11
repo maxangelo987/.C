@@ -1,0 +1,32 @@
+#include<stdio.h>
+main()
+{
+long x,rem,rem1,rem2,sum;
+clrscr();
+scanf("%ld",&x);
+for (;;)
+{
+rem2=0;
+for(;x!=0;)
+	{
+	rem=x%10;
+	rem1=rem*rem;
+	sum=rem1+rem2;
+	rem2=sum;
+	x=x/10;
+	}
+	x=sum;
+if (sum==1)
+	{
+	printf("It's a Happy Number. Sum=%ld",sum);
+	break;
+	}
+else if (sum==145)
+	{
+	printf("It's not a Happy Number.");
+	break;
+	}
+}
+getch();
+
+}

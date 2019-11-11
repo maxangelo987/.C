@@ -1,0 +1,28 @@
+#include<stdio.h>
+main()
+{
+int i,num,x,y;
+clrscr();
+
+
+
+scanf("%d%d%d",&num,&x,&y);
+	if(num%2==0)
+	{
+	printf("even");
+	}
+	else
+	{
+	printf("odd");
+	}
+	if(x%2==0)
+	{
+	printf("even");
+	}
+	else
+	{
+
+
+
+getch();
+}

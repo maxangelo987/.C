@@ -1,0 +1,40 @@
+#include<stdio.h>
+
+main(){
+
+int a,b,c,sum,rem;
+long prod;
+int ave,large;
+
+clrscr();
+
+printf("Input 3 Numbers") ;
+printf("\n\n1st = ");
+scanf("%d",&a) ;
+printf("\n\n2nd = ") ;
+scanf("%d",&b) ;
+printf("\n\n3rd = ") ;
+scanf("%d",&c) ;
+
+sum=a+b+c;
+prod=a*b*c;
+ave=sum/3;
+rem=sum%3;
+
+large=a;
+
+if(b>a)
+large=b;
+if(c>b)
+large=c;
+
+printf("\n\n\nSUM= %d", sum);
+printf("\n\n\nPRODUCT= %ld", prod) ;
+printf("\n\n\nQUOTIENT= %d", ave);
+printf("\tr = %d",rem) ;
+printf("\n\n\nLARGEST = %d",large);
+
+
+
+getch();
+}

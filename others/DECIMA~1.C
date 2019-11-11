@@ -1,0 +1,20 @@
+#include<stdio.h>
+main(){
+	int num,rem,arr[100],i,j,quot;
+	clrscr();
+	printf("Enter number:");
+	scanf("%d",&num);
+	i=0;
+	for (;;) {
+	quot=num/8;
+	rem=num%8;
+	num=quot;
+	arr[i]=rem;
+	i++;
+	if (quot==0){
+	break;}}
+	printf("OCTAL:");
+	for (j=i-1;j>=0;j--) {
+	printf("%d",arr[j]);}
+	getch();}
+

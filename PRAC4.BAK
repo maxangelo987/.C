@@ -1,0 +1,74 @@
+#include<stdio.h>
+main()
+  {
+  int num[100],i,j,k,l,m,pf[10][100];
+  int countl,countm[100],prod;
+  clrscr();
+  printf("Input: ");
+
+      countl=0;
+for (l=0;;l++,countl++)
+  {
+  i=1;
+  countm[l]=0;
+  m=0;
+  scanf("%d",&num[l]);
+
+  if (num[l]==0)
+	{
+	break;
+	}
+
+  while(i<=num[l])
+	{
+	k=0;
+	if(num[l]%i==0)
+		{
+		j=1;
+		while(j<=i)
+			{
+			if(i%j==0)
+				{
+				k++;
+				}
+			j++;
+			}
+		if(k==2)
+			{
+			pf[l][m]=i;
+			m++;
+			countm[l]++;
+			}
+		}
+		i++;
+	}
+
+ }
+
+ printf("Output: ");
+
+for (i=0;i<countl;i++)
+	{
+	if (countm[i]!=1)
+		{
+		prod=1;
+		for (j=0;j<countm[i];j++)
+			{
+			prod=prod*pf[i][j];
+			}
+
+		if (prod==num[i])
+			{
+			printf("%d:",num[i]);
+			for (j=0;j<countm[i]-1;j++)
+				{
+				printf("%d*",pf[i][j]);
+				}
+				printf("%d",pf[i][j]);
+			}
+		}
+
+		printf("\n");
+	}
+   getch();
+}

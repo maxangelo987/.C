@@ -1,0 +1,41 @@
+#include<stdio.h>
+main()
+{
+
+
+int i, inp[100],j,max,min;
+clrscr();
+
+for (i=0;;i++)
+	{
+	scanf("%d",&inp[i]);
+
+	if (inp[i]==0)
+		{
+		break;
+		}
+	}
+
+max=inp[0];
+for (j=0;j<i;j++)
+	{
+
+	if (inp[j]>max)
+		{
+		max=inp[j];
+		}
+	}
+
+min=inp[0];
+for (j=0;j<i;j++)
+	{
+	if (inp[j]<min)
+		{
+		min=inp[j];
+		}
+
+	}
+printf("min - %d",min);
+printf("max - %d",max);
+getch();
+}

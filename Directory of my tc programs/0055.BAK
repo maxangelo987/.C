@@ -1,0 +1,52 @@
+#include<stdio.h>
+main()
+{
+
+char str[100],x;
+long f,y;
+clrscr();
+
+printf("Enter a Word: ");
+gets(str);
+y=strlen(x);
+
+for (f=0;f<y;f++)
+{
+x=str[f];
+
+switch (x)
+{
+case 'A': case 'a': printf("E"); break;
+case 'B': case 'b': printf("F"); break;
+case 'C': case 'c': printf("G"); break;
+case 'D': case 'd': printf("H"); break;
+case 'E': case 'e': printf("I"); break;
+case 'F': case 'f': printf("J"); break;
+case 'G': case 'g': printf("K"); break;
+case 'H': case 'h': printf("L"); break;
+case 'I': case 'i': printf("M"); break;
+case 'J': case 'j': printf("N"); break;
+case 'K': case 'k': printf("O"); break;
+case 'L': case 'l': printf("P"); break;
+case 'M': case 'm': printf("Q"); break;
+case 'N': case 'n': printf("R"); break;
+case 'O': case 'o': printf("S"); break;
+case 'P': case 'p': printf("T"); break;
+case 'Q': case 'q': printf("U"); break;
+case 'R': case 'r': printf("V"); break;
+case 'S': case 's': printf("W"); break;
+case 'T': case 't': printf("X"); break;
+case 'U': case 'u': printf("Y"); break;
+case 'V': case 'v': printf("Z"); break;
+case 'W': case 'w': printf("A"); break;
+case 'X': case 'x': printf("B"); break;
+case 'Y': case 'y': printf("C"); break;
+case 'Z': case 'z': printf("D"); break;
+
+
+}
+
+}
+
+getch();
+}

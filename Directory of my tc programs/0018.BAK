@@ -1,0 +1,46 @@
+/* (18) Finding the Greatest Common Denominator of the numbers. <Comp1/MATH1> */
+
+#include<stdio.h>
+main()
+
+{
+
+
+long num,a,inp,gcd,rem,actual_gcd;
+
+clrscr();
+
+printf("Program to find the Greatest Common Denominator of the numbers..\n");
+printf("Enter How many input: ");
+scanf("%ld",&num);
+
+	for(a=1;a<=num;a++)
+	{
+		if(a==1)
+		{
+
+		scanf("%ld",&inp);
+		gcd=inp;
+		}
+
+		else
+		{
+		scanf("%ld",&inp);
+
+			while(gcd!=0)
+				{
+				rem=inp%gcd;
+				inp=gcd;
+				actual_gcd=gcd;
+				gcd=rem;
+				}
+		gcd=actual_gcd;
+		}
+	}
+
+
+printf(" Its greatest denominator %ld",gcd);
+
+getch();
+
+}

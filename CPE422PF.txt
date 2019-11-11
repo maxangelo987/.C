@@ -1,0 +1,225 @@
+#include <graphics.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <conio.h>
+#include <comm.h>
+
+/*********************** GLOBAL VARIABLES **********************************/
+
+int xmax,ymax,xdum=2,ydum=2,player=1,vert,x,o;
+int xex[200],yex[200],who[200],ind;
+int i,j,l,q;
+int x1=60,x2=60,y1=60,y2=60;
+int board[8][8]={
+    {  0, 0,  0, 0, 0, 0, 0, 0},
+    {  0, 1,  1, 1, 2, 2, 2, 2},
+    {  0, 1,  1, 1, 1, 2, 2, 2},
+    {  0, 1,  1, 1, 2, 2, 2, 2},
+    {  0, 4,  1, 4, 0, 2, 3, 2},
+    {  0, 4,  4, 4, 4, 3, 3, 3},
+    {  0, 4,  4, 4, 3, 3, 3, 3},
+    {  0, 4,  4, 4, 4, 3, 3, 3}
+};
+int board2[7][7]={
+    {  1,  1, 1, 4, 4, 4, 4},
+    {  1,  1, 1, 1, 4, 4, 4},
+    {  1,  1, 1, 4, 4, 4, 4},
+    {  2,  1, 2, 0, 4, 3, 4},
+    {  2,  2, 2, 2, 3, 3, 3},
+    {  2,  2, 2, 3, 3, 3, 3},
+    {  2,  2, 2, 2, 3, 3, 3}
+};
+/*********************** STRUCTURES ****************************************/
+
+struct pct
+{ int pl; int con1; int con2; int con1_pl; int con2_pl; } p[15][15];
+
+/*********************** PROTOTYPES ****************************************/
+
+void putlinev(int i,int j,int k);
+void putline(int i,int j,int k);
+void putdot(int i,int j,int k);
+void reposition();
+void graphinit();
+void drawlines();
+void drawdots();
+
+void drawall();
+void intro();
+void move();
+void dim();
+
+/*********************** M A I N *******************************************/
+
+main()
+{
+   graphinit(); intro(); closegraph(); dim(); graphinit(); setbkcolor(BLUE);
+   drawdots(); move(); getch(); closegraph();
+}
+
+/*********************** FUNCTIONS *****************************************/
+
+void graphinit()
+{
+   int driver=DETECT,mode;
+   initgraph(&driver,&mode,"c:\\tc\\bgi");
+}
+
+void dim()
+{
+   start: clrscr();
+   xmax=8; ymax=8;
+}
+
+void intro()
+{
+/**/
+}
+
+void drawdots(){
+int x,y;
+
+x=60;y=60;
+cleardevice();
+
+ for(i=1;i<xmax;i++)
+   {
+    for(j=1;j<ymax;j++)
+    {
+        if(board[j][i]!=-1)
+        {
+	switch(board[j][i]){
+		case 1:putdot(x,y,RED);break;
+		case 2:putdot(x,y,GREEN);break;
+		case 3:putdot(x,y,YELLOW);break;
+		case 4:putdot(x,y,5);break; /*5=PINK*/
+		}
+	
+	} 
+      x+=60;
+     }
+    x=60;
+    y+=60;
+   
+   }
+}
+
+void putdot(int i,int j,int k)
+{
+   setcolor(k);
+/* line(i*30-1,j*30-1,i*30+1,j*30-1);*/
+/*  line(i*30-1,j*30,i*30+1,j*30);*/
+/*   line(i*30-1,j*30+1,i*30+1,j*30+1);*/
+
+   setfillstyle(1,k);
+   setcolor(k);
+   fillellipse(i,j,5,5);
+   if(k!=0)
+   {
+   if(k==15){setcolor(7);setfillstyle(1,7);}
+   else {setfillstyle(1,15);setcolor(15);}
+   fillellipse(i+3,j-2,1,2);
+   }
+}
+
+void putline(int i,int j,int k)
+{
+   setcolor(k);
+   line(i*30+x1+1,j*30+y1-1,i*30+x1+58,j*30+y1-1);
+   line(i*30+x1+1,j*30+y1,i*30+x1+58,j*30+y1);
+   line(i*30+x1+1,j*30+y1+1,i*30+x1+58,j*30+y1+1);
+}
+
+void putlinev(int i,int j,int k)
+{
+   setcolor(k);
+   line(i*30+x2-1,j*30+y2+2,i*30+x2-1,j*30+y2+58);
+   line(i*30+x2,j*30+y2+2,i*30+x2,j*30+y2+58);
+   line(i*30+x2+1,j*30+y2+2,i*30+x2+1,j*30+y2+58);
+}
+
+
+void drawlines()
+{
+int i1,j1;
+i1=2;j1=2;
+   for(i=0;i<=xmax+4;i++){
+    for(j=0;j<=ymax+4;j++){
+        if(p[i][j].con2)
+        {
+	/*printf("j=%d",j/2);*/
+ 	/*printf("i=%d",i/2);*/
+	/*printf("b=%d",board[(j/2)][(i/2)]);*/
+ 
+	switch(board2[(j/2)][(i/2)]){
+		case 1:putline(i,j,RED);break;
+		case 2:putline(i,j,GREEN);break;
+		case 3:putline(i,j,YELLOW);break;
+		case 4:putline(i,j,5);break; /*5=PINK*/
+		}
+		}
+        if(p[i][j].con1)
+        {
+	switch(board2[(j/2)][(i/2)]){
+		case 1:putlinev(i,j,RED);break;
+		case 2:putlinev(i,j,GREEN);break;
+		case 3:putlinev(i,j,YELLOW);break;
+		case 4:putlinev(i,j,5);break; /*5=PINK*/
+		}
+			}
+       j1=j1+2;
+      }	
+    i1=i1+2;
+    }
+}
+
+void reposition()
+{
+   if(xdum>=xmax && !vert) xdum=xdum-2;
+   if(ydum>=ymax && vert) ydum=ydum-2;
+}
+
+
+void drawall()
+{ drawdots(); drawlines();  }
+
+void move()
+{
+   char a;
+   while(a!=ESC)
+   {
+      begin:
+      a=getch();
+      if(!vert)
+      {
+         if(a==RIGHT && xdum+1<xmax+2)
+         { drawall(); xdum=xdum+2; putline(xdum,ydum,15); }
+         if(a==LEFT && xdum-1>=1)
+         { drawall(); xdum=xdum-2; putline(xdum,ydum,15); }
+         if(a==UP && ydum-1>=1)
+         { drawall(); ydum=ydum-2; putline(xdum,ydum,15); }
+         if(a==DOWN && ydum+1<=ymax+3)
+         { drawall(); ydum=ydum+2; putline(xdum,ydum,15); }
+         if(a==ENTER && !p[xdum][ydum].con2) { p[xdum][ydum].con2=1;
+	        drawall();  }
+         if(a==SPACE) { if(vert) vert=0; else vert=1; reposition();
+	        drawall(); putlinev(xdum,ydum,15); goto begin; }
+      }
+      if(vert)
+      {
+         if(a==RIGHT && xdum<xmax+3)
+         { drawall(); xdum=xdum+2; putlinev(xdum,ydum,15); }
+         if(a==LEFT && xdum-1>=1)
+         { drawall(); xdum=xdum-2; putlinev(xdum,ydum,15); }
+         if(a==UP && ydum-1>=1)
+         { drawall(); ydum=ydum-2; putlinev(xdum,ydum,15); }
+         if(a==DOWN && ydum+1<ymax+2)
+         { drawall(); ydum=ydum+2; putlinev(xdum,ydum,15); }
+         if(a==ENTER && !p[xdum][ydum].con1) { p[xdum][ydum].con1=1;
+	        drawall();  }
+         if(a==SPACE) { if(vert) vert=0; else vert=1; reposition();
+	        drawall(); putline(xdum,ydum,15); goto begin; }
+      }
+   }
+}
+

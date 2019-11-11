@@ -1,0 +1,86 @@
+#include<stdio.h>
+main()
+{
+long x,i,j,array[100],count,temp;
+long prime[100],m=0,countprime=0;
+long composite[100],n=0,countcomposite=0;
+clrscr();
+
+
+printf("Input(s): ");
+scanf("%ld",&x);
+
+printf("Input: ");
+for (i=0;i<x;i++)
+	{
+	scanf("%ld",&array[i]);
+	}
+
+
+for (i=0;i<x;i++)
+{
+count=0;
+	for (j=2;j<array[i];j++)
+		{
+		if (array[i]%j==0)
+			{
+			count++;
+			}
+		}
+
+	if (count==0)
+		{
+		prime[m]=array[i];
+		m++;
+		countprime++;
+		}
+	else
+		{
+		composite[n]=array[i];
+		n++;
+		countcomposite++;
+		}
+}
+
+
+for (i=0;i<countprime-1;i++)
+	{
+	for (j=0;j<countprime-i-1;j++)
+		{
+		if (prime[j]>prime[j+1])
+			{
+			temp=prime[j];
+			prime[j]=prime[j+1];
+			prime[j+1]=temp;
+			}
+		}
+	}
+
+for (i=0;i<countcomposite-1;i++)
+	{
+	for (j=0;j<countcomposite-i-1;j++)
+		{
+		if (composite[j]<composite[j+1])
+			{
+			temp=composite[j];
+			composite[j]=composite[j+1];
+			composite[j+1]=temp;
+			}
+		}
+	}
+
+
+printf("Output (Ascending): ");
+for (i=0;i<countprime;i++)
+	{
+	printf(" %ld ",prime[i]);
+	}
+
+	printf("\n");
+printf("Output (Descending): ");
+for (i=0;i<countcomposite;i++)
+	{
+	printf(" %ld ",composite[i]);
+	}
+getch();
+}

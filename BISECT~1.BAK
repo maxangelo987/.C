@@ -1,0 +1,47 @@
+#include<stdio.h>
+#include<math.h>
+float fun (float x)
+{
+    return (3*x + sin(x) - exp(x));
+}
+void bisection (float *x, float a, float b, int *itr)
+/* this function performs and prints the result of one iteration */
+{
+    *x=(a+b)/2;
+    ++(*itr);
+    printf("Iteration no. %3d X = %7.5f\n", *itr, *x);
+}
+void main ()
+{
+    int itr = 0, maxmitr;
+    float x, a, b, allerr, x1;
+    clrscr();
+    printf("\nEnter the value of a:\n");
+    scanf("%f", &a);
+    printf("\nEnter the value of b:\n");
+    scanf("%f",&b);
+    printf("\nEnter the values of maximum iterations:\n");
+    scanf("%d",&maxmitr);
+
+    allerr=0.0001;
+    bisection (&x, a, b, &itr);
+    do
+    {
+        if (fun(a)*fun(x) < 0)
+            b=x;
+        else
+            a=x;
+        bisection (&x1, a, b, &itr);
+        if (fabs(x1-x) < allerr)
+        {
+            printf("After %d iterations, root = %6.4f\n", itr, x1);
+            getch();
+	    return 0;
+        }
+        x=x1;
+    }
+    while (itr < maxmitr);
+    printf("The solution does not converge or iterations are not sufficient");
+    getch(); 
+   return 1;
+}

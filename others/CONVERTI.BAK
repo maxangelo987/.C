@@ -1,0 +1,10 @@
+#include<stdio.h>
+#include<string.h>
+main() {
+	char number;
+	scanf("%c",&number);
+	number = (int) number - 48;
+	printf ("The Output : %d",number);
+	getch();
+	}
+

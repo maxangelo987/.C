@@ -1,0 +1,41 @@
+#include<stdio.h>
+main()
+{
+long rev,num,rem;
+long bak,i,x;
+clrscr();
+
+
+scanf("%ld",&num);
+bak=num;
+rev=0;
+for (;num!=0;)
+	{
+	rem=num%10;
+	num=num/10;
+	rev=rem+(rev*10);
+	}
+
+	printf("%ld %ld",rev,bak);
+	getch();
+
+
+if (rev==bak)
+	{
+	i=0;
+	for (;bak!=0;)
+		{
+		if (bak%i==0)
+			{
+			x=x/i;
+			printf("%ld",i);
+			}
+		i++;
+		}
+	}
+
+
+
+
+getch();
+}

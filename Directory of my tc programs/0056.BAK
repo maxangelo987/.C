@@ -1,0 +1,43 @@
+#include<stdio.h>
+main()
+{
+long num,i,even[100],odd[100],x[100],j=0,k=0,count1=0,count2=0;
+clrscr();
+printf("\n Enter number of digits:");
+scanf("%ld",&num);
+
+for(i=0;i<num;i++)
+	{
+	scanf("%ld",&x[i]);
+	}
+for(i=0;i<num;i++)
+	{
+	if(x[i]%2!=0)
+		{
+		odd[j]=x[i];
+		j++;
+		count1++;
+		}
+	else
+		{
+		even[k]=x[i];
+		k++;
+		count2++;
+}		}
+	printf("\n EVEN:");
+
+for(i=0;i<count1;i++)
+	{
+
+	printf("% ld ",even[i]);
+	}
+printf("\n ODD:");
+for(i=0;i<count2;i++)
+	{
+	printf(" %ld ",odd[i]);
+	}
+
+
+
+getch();
+}

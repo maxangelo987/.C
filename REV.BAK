@@ -1,0 +1,25 @@
+#include<stdio.h>
+main(){
+
+long num,rem,sum=0;
+clrscr();
+
+scanf("%ld",&num);
+
+for(;num>=10;)
+{
+    for(;num!=0;)
+    {
+	rem=num%10;
+	printf("%d +",rem);
+	sum=sum+rem;
+	num=num/10;
+    }
+    num=sum;
+    printf("\b= %d",sum);
+    sum=0;
+}
+
+
+getch();
+}

@@ -1,0 +1,18 @@
+{ Report What Was Expected }
+procedure Expected(s: string);
+begin
+Abort(s + ' Expected');
+end;
+{--------------------------------------------------------------}
+{ Match a Specific Input Character }
+procedure Match(x: char);
+begin
+if Look = x then GetChar
+else Expected('''' + x + '''');
+end;
+{--------------------------------------------------------------}
+{ Recognize an Alpha Character }
+function IsAlpha(c: char): boolean;
+begin
+IsAlpha := upcase(c) in ['A'..'Z'];
+end;

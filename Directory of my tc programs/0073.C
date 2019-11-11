@@ -1,0 +1,49 @@
+/* (73) Enter string then display the word 
+depending on the given position
+(2D array, for loop functions) <Comp1/Engl1> */
+
+#include<stdio.h>
+main()
+{
+char str[100],str1[10][100];
+
+int i,x,y=0,count[100],b=0,a=0,j;
+int k,l,max,t,pos;
+clrscr();
+
+printf("Enter String: ");
+gets(str);
+x=strlen(str);
+printf("Enter Position: ");
+scanf("%d",&pos);
+count[0]=0;
+for(i=0;i<x;i++)
+	{
+	str1[a][b]=str[i];
+	b++;
+	count[a]++;
+	if((str[i]==' '&&str[i+1]!=' ')||str[i]=='\0')
+		{
+		 a++;
+		 count[a]=0;
+		 b=0;
+		}
+	}
+
+/*for (i=0;i<a+1;i++)                    */
+/*	{                                */
+/*	for (j=0;j<count[i];j++)         */
+/*		{                        */
+/*		printf("%c",str1[i][j]); */
+/*		}                        */
+/*	printf("\n");                    */
+/*	}                                */
+
+
+printf("String: ");
+for (i=0;i<count[pos-1];i++)
+	{
+	printf("%c",str1[pos-1][i]);
+	}
+getch();
+}

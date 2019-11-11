@@ -1,0 +1,61 @@
+#include<stdio.h>
+main()
+{
+
+
+long  y,x,num1[100],temp[100],temp1[100];
+double num[100],num2[100];
+long i,digits[100],sum;
+long rem, t;
+clrscr();
+
+printf("Enter How many inputs: ");
+scanf("%ld",&x);
+printf("Enter How many digits: ");
+scanf("%ld",&y);
+printf("Input(s): ");
+
+for (i=0;i<x;i++)
+	{
+	scanf("%lf",&num[i]);
+	}
+
+for (i=0;i<x;i++)
+	{
+	num1[i]=(long)num[i];
+	num2[i]=num[i]-num1[i];
+	temp[i]=num1[i];
+	temp1[i]=num1[i];
+
+	digits[i]=0;
+
+	for (;num1[i]!=0;)
+		{
+		num1[i]=num1[i]/10;
+		digits[i]++;
+		}
+
+	if (digits[i]!=y)
+		{
+		printf(" %ld ",temp[i]);
+		}
+
+	else
+		{
+		t=0;
+		printf("%ld",t);
+		for (;temp1[i]!=0;)
+			{
+			rem=temp1[i]%10;
+			sum=rem+t;
+			rem=t;
+			}
+
+
+		}
+
+
+	}
+
+getch();
+}

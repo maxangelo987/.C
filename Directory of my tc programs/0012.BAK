@@ -1,0 +1,22 @@
+/* (12) Reversing mutiple numbers <Comp1> */
+
+#include<stdio.h>
+main()
+{
+
+long n,rev;
+clrscr();
+
+scanf("%ld",&n);
+
+for (;n!=0;)
+	{
+
+	rev=n%10;
+	n=n/10;
+	printf(" %ld ",rev);
+
+	}
+
+getch();
+}

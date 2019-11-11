@@ -1,0 +1,20 @@
+#include<stdio.h>
+main(){
+
+
+double inp;
+long num;
+double sum;
+clrscr();
+
+printf("Input int: ");
+scanf("%ld",&num);
+printf("Input float: ");
+scanf("%lf",&inp);
+
+sum=num+inp;
+printf("Output: %lf",sum);
+
+
+getch();
+}

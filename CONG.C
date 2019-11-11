@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<dos.h>
+#include<stdlib.h>
+float octave[7] = { 130.81, 146.83, 164.81, 174.61, 196, 220, 246.94 } ;
+int n, i ;
+main(){
+clrscr();
+
+printf("                                                                              \n\n\n ");
+printf("Г                                                                            Г\n ");
+printf("Г                                                                            Г\n ");
+printf("Г                                                                            Г\n ");
+printf("Г              ллл    ллл  лл   л  ллл   ллл     л    лллллл   ллл           Г\n ");
+printf("Г             л      л   л л л  л л      л  л   л л     л     л              Г\n ");
+printf("Г             л      л   л л  л л л  лл  ллл   ллллл    л      ллл           Г\n ");
+printf("Г             л      л   л л   лл л   л  л  л  л   л    л         л          Г\n ");
+printf("Г              ллл    ллл  л    л  ллл   л   л л   л    л     лллл           Г\n ");
+printf("Г                                                                            Г\n ");
+printf("Г                                                                            Г\n ");
+printf("Г                      You used 44 moves at right way!                       Г\n ");
+printf("Г                                                                            Г\n ");
+printf("Г  Program by: Max Angelo Perin                                              Г\n ");
+printf("Г  Created using C Programming                                               Г\n ");
+printf("Г  CpE 422 - Software Engineering                                            Г\n ");
+printf("Г  Project - Kolor Matching Game (Kruskal Algorithn)                         Г\n ");
+printf("Г                                                                            Г\n ");
+printf("Г                                                                            Г\n ");
+
+for ( i = 0 ; i < 7 ; i++ )
+{
+sound ( octave[i] * 8 ) ;
+delay ( 80 ) ;
+}
+nosound() ;
+
+
+getch();
+}

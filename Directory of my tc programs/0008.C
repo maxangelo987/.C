@@ -1,0 +1,49 @@
+/* (8) Add if Composite and Minus if Prime and output is the total 
+(for loop function) <Comp1> */
+
+#include<stdio.h>
+main()
+{
+
+int num,count,i,j;
+float sum=1, a;
+clrscr();
+
+printf("This program let's you:\nAdd if 1/Composite and Minus if 1/Prime depending on the input.\n");
+printf("Input= ");
+scanf("%d",&num);
+
+
+printf("1");
+
+for (i=2;i<=num;i++)
+	{
+	count=0;
+	a=(float)1/i;
+
+
+	for (j=2;j<i;j++)
+		{
+		if (i%j==0)
+		{
+		count++;
+		break;
+		}
+	}
+
+if (count==0)
+	{
+	printf("- 1/%d",i);
+	sum-=a;
+	}
+  else
+	{
+	printf("+ 1/%d",i);
+	sum+=a;
+	}
+}
+
+printf(" = %f",sum);
+getch();
+
+}

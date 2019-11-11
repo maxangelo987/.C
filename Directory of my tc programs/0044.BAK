@@ -1,0 +1,51 @@
+#include<stdio.h>
+main()
+{
+
+long c,r,i,j,x[100][100],x1[100][100],sum[100][100];
+clrscr();
+
+printf("Enter # of columns: ");
+scanf("%ld",&c);
+printf("Enter # of rows: ");
+scanf("%ld",&r);
+printf("1st Table:\n");
+
+for (i=0;i<c;i++)
+   {
+   printf("Enter data %ld: ",i+1);
+        for (j=0;j<r;j++)
+	  {
+	  scanf("%ld",&x[i][j]);
+	  }
+   }
+printf("2nd Table:\n");
+
+for (i=0;i<c;i++)
+     {
+     printf("Enter data %ld: ",i+1);
+	for (j=0;j<r;j++)
+         {
+	  scanf("%ld",&x1[i][j]);
+	  }          }
+printf("Sum of all the elements:\n");
+    for (i=0;i<c;i++)
+     {
+      for (j=0;j<r;j++)
+	  {
+         sum[i][j]=x[i][j]+x1[i][j];
+	  }
+     }
+
+for (i=0;i<c;i++)
+    {
+     for (j=0;j<r;j++)
+	 {
+	 printf(" %ld ",sum[i][j]);
+	 }
+    printf("\n");
+    }
+
+
+getch();
+}

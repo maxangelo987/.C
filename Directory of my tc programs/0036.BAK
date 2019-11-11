@@ -1,0 +1,72 @@
+#include<stdio.h>
+main()
+{
+
+
+double inp[100],x2[100],x23[100];
+long x,x1[100],i,x22[100],temp[100],rem[100],temp1[100];
+long count[100],j;
+clrscr();
+
+printf("Enter Inputs: ");
+
+for (i=0;;i++)
+	{
+	scanf("%lf",&inp[i]);
+
+	if (inp[i]==0)
+		{
+		break;
+		}
+	}
+
+
+printf("Enter # of digits: ");
+scanf("%ld",&x);
+
+for (j=0;j<i;j++)
+{
+
+x1[j]=(long)inp[j];
+x2[j]=inp[j]-x1[j];
+
+if (x2[j]!=0)
+	{
+	x2[j]=(x2[j]*1000000)+1;
+	x22[j]=(long)x2[j];
+	temp[j]=x22[j]%10;
+
+	if (temp[j]==1)
+		{
+		x22[j]=x22[j]-1;
+		}
+
+		rem[j]=0;
+		for(;;)
+			{
+
+			if (rem[j]!=0)
+				{
+				break;
+				}
+
+			x22[j]=x22[j]/10;
+			rem[j]=x22[j]%10;
+			}
+
+		temp1[j]=x22[j];
+		count[j]=0;
+		for(;temp1[j]!=0;)
+			{
+			temp1[j]=temp1[j]/10;
+			count[j]++;
+			}
+	if (count[j]==x)
+		{
+		printf(" %ld.%ld ",x22[j],x1[j]);
+		}
+
+	}
+}
+getch();
+}
