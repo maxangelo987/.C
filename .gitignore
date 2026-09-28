@@ -31,3 +31,7 @@
 # Debug files
 *.dSYM/
 *.su
+
+# Turbo C generated backups
+*.BAK
+*.bak
